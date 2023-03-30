@@ -1,12 +1,16 @@
 import select_word
 from bcolors import bcolors
+import win
+import lose
+import os
 
 test = 0
-counter = 10
-used = []
+
 
 def new_game():
-    global used
+    used = []
+    counter = 5
+    os.system("clear")
     select_word.new_word()
     hint = [*select_word.selected_word]
     discovered = []
@@ -30,7 +34,6 @@ def new_game():
         discovered_str = " ".join(str(x) for x in discovered)
         print (f"{bcolors.BOLD}    {discovered_str} \n \n {bcolors.RESET}")
     while discovered != hint:
-        global counter
         global test
         if counter >= 7:
             print(bcolors.GREEN + "You have " + str(counter) + " attempts" + bcolors.RESET)
@@ -42,26 +45,20 @@ def new_game():
         if character in used:
             print(f"The {character} has been used, please try again")
             test = 1
+        elif character == select_word.selected_word:
+            discovered = hint
+            break
         else:
             busqueda(character)
         used.append(character)
         if test == 0:
             counter -= 1
         test = 0
-        if counter == 0:
+        if counter <= 0:
             break
     if discovered == hint:
-        print (bcolors.GREEN + bcolors.BOLD + "                       ____                            _         _       _   _                    _" + bcolors.RESET)
-        print (bcolors.GREEN + bcolors.BOLD + "                      / ___|___  _ __   __ _ _ __ __ _| |_ _   _| | __ _| |_(_) ___  _ __  ___   | |" + bcolors.RESET)
-        print (bcolors.GREEN + bcolors.BOLD + "                     | |   / _ \| '_ \ / _` | '__/ _` | __| | | | |/ _` | __| |/ _ \| '_ \/ __|  | |" + bcolors.RESET)
-        print (bcolors.GREEN + bcolors.BOLD + "                     | |__| (_) | | | | (_| | | | (_| | |_| |_| | | (_| | |_| | (_) | | | \__ \  |_|" + bcolors.RESET)
-        print (bcolors.GREEN + bcolors.BOLD + "                      \____\___/|_| |_|\__, |_|  \__,_|\__|\__,_|_|\__,_|\__|_|\___/|_| |_|___/  (_)" + bcolors.RESET)
-        print (bcolors.GREEN + bcolors.BOLD + "                                       |___/                                                     " + bcolors.RESET)
+        win.win(select_word.selected_word)
+        
     else:
-        print (bcolors.RED + bcolors.BOLD + "                     __   __               _                      _ " + bcolors.RESET)
-        print (bcolors.RED + bcolors.BOLD + "                     \ \ / /__  _   _     | |    ___  ___  ___   | |" + bcolors.RESET)
-        print (bcolors.RED + bcolors.BOLD + "                      \ V / _ \| | | |    | |   / _ \/ __|/ _ \  | |" + bcolors.RESET)
-        print (bcolors.RED + bcolors.BOLD + "                       | | (_) | |_| |    | |__| (_) \__ \  __/  |_|" + bcolors.RESET)
-        print (bcolors.RED + bcolors.BOLD + "                       |_|\___/ \__,_|    |_____\___/|___/\____  (_) \n" + bcolors.RESET)
-
-        print (bcolors.BOLD + "      The correct word was " + bcolors.YELLOW + select_word.selected_word + bcolors.RESET)
+       lose.lose(select_word.selected_word)
+       
