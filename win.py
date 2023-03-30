@@ -1,6 +1,7 @@
 from bcolors import bcolors
 import new_game
 import os
+from credits import credits
 
 def win(word):
     os.system("clear")
@@ -16,6 +17,6 @@ def win(word):
     if response == "y":
         new_game.new_game()
     elif response == "n":
-        quit()
+        credits()
     else:
         win(word)
