@@ -47,11 +47,17 @@ while discovered != hint:
     if counter == 0:
         break
 if discovered == hint:
-    print (bcolors.GREEN + bcolors.BOLD + "   ____                            _         _       _   _                 " + bcolors.RESET)
-    print (bcolors.GREEN + bcolors.BOLD + "  / ___|___  _ __   __ _ _ __ __ _| |_ _   _| | __ _| |_(_) ___  _ __  ___ " + bcolors.RESET)
-    print (bcolors.GREEN + bcolors.BOLD + " | |   / _ \| '_ \ / _` | '__/ _` | __| | | | |/ _` | __| |/ _ \| '_ \/ __|" + bcolors.RESET)
-    print (bcolors.GREEN + bcolors.BOLD + " | |__| (_) | | | | (_| | | | (_| | |_| |_| | | (_| | |_| | (_) | | | \__ \ " + bcolors.RESET)
-    print (bcolors.GREEN + bcolors.BOLD + "  \____\___/|_| |_|\__, |_|  \__,_|\__|\__,_|_|\__,_|\__|_|\___/|_| |_|___/" + bcolors.RESET)
-    print (bcolors.GREEN + bcolors.BOLD + "                   |___/                                                   " + bcolors.RESET)
+    print (bcolors.GREEN + bcolors.BOLD + "        ____                            _         _       _   _                    _" + bcolors.RESET)
+    print (bcolors.GREEN + bcolors.BOLD + "       / ___|___  _ __   __ _ _ __ __ _| |_ _   _| | __ _| |_(_) ___  _ __  ___   | |" + bcolors.RESET)
+    print (bcolors.GREEN + bcolors.BOLD + "      | |   / _ \| '_ \ / _` | '__/ _` | __| | | | |/ _` | __| |/ _ \| '_ \/ __|  | |" + bcolors.RESET)
+    print (bcolors.GREEN + bcolors.BOLD + "      | |__| (_) | | | | (_| | | | (_| | |_| |_| | | (_| | |_| | (_) | | | \__ \  |_|" + bcolors.RESET)
+    print (bcolors.GREEN + bcolors.BOLD + "       \____\___/|_| |_|\__, |_|  \__,_|\__|\__,_|_|\__,_|\__|_|\___/|_| |_|___/  (_)" + bcolors.RESET)
+    print (bcolors.GREEN + bcolors.BOLD + "                        |___/                                                     " + bcolors.RESET)
 else:
-    print (bcolors.RED + "You Lose" + bcolors.RESET + " the correct word has " + select_word.selected_word)
+    print (bcolors.RED + bcolors.BOLD + " __   __               _                      _ " + bcolors.RESET)
+    print (bcolors.RED + bcolors.BOLD + " \ \ / /__  _   _     | |    ___  ___  ___   | |" + bcolors.RESET)
+    print (bcolors.RED + bcolors.BOLD + "  \ V / _ \| | | |    | |   / _ \/ __|/ _ \  | |" + bcolors.RESET)
+    print (bcolors.RED + bcolors.BOLD + "   | | (_) | |_| |    | |__| (_) \__ \  __/  |_|" + bcolors.RESET)
+    print (bcolors.RED + bcolors.BOLD + "   |_|\___/ \__,_|    |_____\___/|___/\____  (_) \n" + bcolors.RESET)
+
+    print (bcolors.BOLD + "      The correct word was " + bcolors.YELLOW + select_word.selected_word + bcolors.RESET)
