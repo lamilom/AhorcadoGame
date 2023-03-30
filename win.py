@@ -12,7 +12,7 @@ def win(word):
     print (bcolors.GREEN + bcolors.BOLD + "                      \____\___/|_| |_|\__, |_|  \__,_|\__|\__,_|_|\__,_|\__|_|\___/|_| |_|___/  (_)" + bcolors.RESET)
     print (bcolors.GREEN + bcolors.BOLD + "                                       |___/                                                     " + bcolors.RESET)
     print (bcolors.BOLD + "\n \n                                      The correct word was " + bcolors.YELLOW + word + bcolors.RESET)
-    response = input(bcolors.BOLD + "\n \n \n \n \n \n  Do you wanna play again? (y/n)" + bcolors.YELLOW + word + bcolors.RESET)
+    response = input(bcolors.BOLD + "\n \n \n \n \n \n  Do you wanna play again? (y/n)" + bcolors.RESET)
     if response == "y":
         new_game.new_game()
     elif response == "n":

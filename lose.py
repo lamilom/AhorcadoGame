@@ -11,7 +11,7 @@ def lose(word):
     print (bcolors.RED + bcolors.BOLD + "                       | | (_) | |_| |    | |__| (_) \__ \  __/  |_|" + bcolors.RESET)
     print (bcolors.RED + bcolors.BOLD + "                       |_|\___/ \__,_|    |_____\___/|___/\____  (_) \n" + bcolors.RESET)
     print (bcolors.BOLD + "                            The correct word was " + bcolors.YELLOW + word + bcolors.RESET)
-    response = input(bcolors.BOLD + "\n \n \n \n \n \n  Do you wanna play again? (y/n)" + bcolors.YELLOW + word + bcolors.RESET)
+    response = input(bcolors.BOLD + "\n \n \n \n \n \n  Do you wanna play again? (y/n)" + bcolors.RESET)
     if response == "y":
         new_game.new_game()
     elif response == "n":
