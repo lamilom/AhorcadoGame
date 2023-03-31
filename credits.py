@@ -17,5 +17,5 @@ def credits():
     print (f" {bcolors.BOLD}            | |__| (_| | | | | | | | | (_) | |  | |        {bcolors.RESET}")
     print (f" {bcolors.BOLD}            |_____\__,_|_| |_| |_|_|_|\___/|_|  |_|        {bcolors.RESET}")
     print (f" {bcolors.BOLD}                                                     {bcolors.RESET}")
-    time.sleep(2)
+    time.sleep(1)
     quit()
