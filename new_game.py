@@ -20,11 +20,11 @@ def new_game():
         discovered.append('_')
     discovered.pop()
     discovered_str = " ".join(str(x) for x in discovered)
-    print (f"{bcolors.BOLD}    {discovered_str} \n \n {bcolors.RESET}")
-
     for i in range(len(hint)):
             if select_word.first_character == hint[i]:
                 discovered[i] = hint[i]
+    discovered_str = " ".join(str(x) for x in discovered)
+    print (f"{bcolors.BOLD}    {discovered_str} \n \n {bcolors.RESET}")
     def busqueda(character):
         for i in range(len(hint)):
             if character == hint[i]:
