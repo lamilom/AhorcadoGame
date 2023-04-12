@@ -1,6 +1,6 @@
 import random
 
-my_file = open("/Users/ramirom/Documents/Programmin/Python/Retos/Personale/AhorcadoGame/dictionary_words.txt", "r")
+my_file = open("dictionary_words.txt", "r")
 data = my_file.read()
 dictionary = data.split("\n")
 my_file.close()
